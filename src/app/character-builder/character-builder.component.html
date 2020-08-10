@@ -19,10 +19,11 @@
         <div class='line-grid age-height'>
             <span class='firstAgeHeight'>I'm</span>
             <span class='input-grid age-section'>
-                <input type='number' min='1' max='300' name='charAge'>
+                <input class='inputPaddingRight' type='number' min='1' max='300' name='charAge'>
                 <p>Age</p>
             </span>
-            <span class='third'>year(s) old and stand</span>
+            <span class='third'>year(s) old</span>
+            <span class='fourth'>and stand</span>
             <span class='input-grid height-section'>
                 <input  type='text' name='charHeight'>
                 <p>Height</p>
@@ -30,18 +31,14 @@
             <span class='fifth'> tall.</span>
         </div>
 
-        <div class='line-grid role'>
-            <span class='first'>I'm the party's</span>
-            <span class='input-grid role-section'>
+        <div class='line-grid single-line-description-input'>
+            <span>I'm the party's</span>
+            <span class='input-grid input-section'>
                 <input  type='text' name='charRole'>
                 <p>Role</p>
             </span>
-            <span class='third'>.</span>
+            <span class='endPunctuation'>.</span>
         </div>
-<!-- 
-        <div class='line-grid'>
-            When people see me, they first notice my
-        </div> -->
 
         <div class='line-grid distinct'>
             <span class='first'>
@@ -97,7 +94,7 @@
                 <input  type='text' name='charHome'>
                 <p>Home</p>
             </span>
-            <span>,</span>
+            <span class='homeComma'>,</span>
         </div>
 
         <div class='line-grid'>
@@ -112,33 +109,33 @@
             <span>.</span>
         </div>
 
-        <div class='line-grid belief'>
+        <div class='line-grid single-line-description-input'>
             <span>I believe in </span>
-            <span class='input-grid'>
+            <span class='input-grid input-section'>
                 <input  type='text' name='charIdeal'>
                 <p>Ideal</p>
             </span>
-            <span>,</span>
+            <span class='endPunctuation'>,</span>
         </div>
         
-        <div class='line-grid flaw'>
-            <span class='firstFlaw'>
+        <div class='line-grid single-line-description-input'>
+            <span>
                 but my 
             </span>
-            <span class='input-grid flaw-section'>
+            <span class='input-grid input-section'>
                 <input  type='text' name='charFlaw'>
                 <p>Flaw</p>
             </span>
-            <span class='secondFlaw'>side can get in the way.</span>
+            <span class='under-input-section'>side can get in the way.</span>
         </div>
 
-        <div class='line-grid dream'>
+        <div class='line-grid single-line-description-input'>
             <span>I dream of </span>
-            <span class='input-grid dream-section'>
+            <span class='input-grid input-section'>
                 <input  type='text' name='charDream'>
                 <p>Dream</p>
             </span>
-            <span class='dreamEnd'>.</span>
+            <span class='endPunctuation'>.</span>
         </div>
     </section>
 </div>  
