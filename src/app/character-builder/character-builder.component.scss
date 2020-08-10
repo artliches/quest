@@ -1,18 +1,93 @@
 .basic-grid {
     &.character-grid {
-        place-items: center start;
+        place-items: center stretch;
         font-size: 1.5rem;
-        grid-gap: 0rem;
+        row-gap: 1rem;
 
         .line-grid {
             display: grid;
-            // grid-template-rows: 1fr;
-            // grid-template-columns: 1fr;
             place-items: start stretch;
             column-gap: .5rem;
-
-            span {
+            grid-template-columns: 2fr .1fr;
+            .first {
                 grid-row: 1;
+                grid-column: 1 / 3;
+            }
+
+            &.names-and-pronouns {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "top"
+                    "middle"
+                    "bottom";
+                .top {
+                    grid-area: top;
+                }
+                .middle {
+                    grid-area: middle;
+                }
+                .bottom {
+                    grid-area: bottom;
+                }
+            }
+
+            &.age-height {
+                grid-template-columns: .5fr 1fr 3fr;
+                .firstAgeHeight {
+                    grid-row: 1 / 1;
+                }
+                .age-section {
+                    grid-row: 1;
+                }
+                .third {
+                    grid-row: 1;
+                }
+                .height-section {
+                    grid-row-start: 2;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+            }
+
+            &.role {
+                grid-template-rows: repeat(1, 1fr);
+                .first {
+                    grid-row: 1;
+                }
+                .role-section {
+                    grid-row: 2;
+                }
+                .third {
+                    grid-row: 2;
+                }
+            }
+
+            &.home {
+                grid-template-columns: 1fr 3fr .1fr;
+            }
+
+            &.belief {
+                grid-template-columns: 1fr 2.2fr .1fr;
+            }
+
+            &.flaw {
+                grid-template-columns: 1fr 4fr .1fr;
+                .secondFlaw {
+                    grid-row: 2;
+                    grid-column: 1 / 3;
+                }
+            }
+
+            &.dream {
+                grid-template-columns: 4fr .1fr;
+                grid-template-rows: repeat(2, 1fr);
+                .dream-section {
+                    grid-row: 2;
+                }
+                .dreamEnd {
+                    grid-row: 2;
+                    grid-column: 2;
+                }
             }
         }
 
@@ -29,6 +104,7 @@
             }
             input {
                 padding-left: .5rem;
+                width: 100%;
             }
             p {
                 grid-area: helper;
@@ -36,6 +112,55 @@
                 place-self: start center;
                 margin: 0rem;
                 color: darkgrey;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .basic-grid {
+        &.character-grid {
+            place-items: center start;
+            font-size: 1.5rem;
+            grid-gap: 0rem;
+    
+            .line-grid {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+                place-items: start stretch;
+                column-gap: .5rem;
+
+                &.names-and-pronouns {
+                    grid-template-areas: "top middle bottom";
+                }
+    
+                span {
+                    grid-row: 1;
+                }
+            }
+    
+            .input-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 0rem;
+                grid-template-areas:
+                    "input"
+                    "helper";
+    
+                .input-section {
+                    grid-area: input;
+                }
+                input {
+                    padding-left: .5rem;
+                }
+                p {
+                    grid-area: helper;
+                    font-size: .9rem;
+                    place-self: start center;
+                    margin: 0rem;
+                    color: darkgrey;
+                }
             }
         }
     }

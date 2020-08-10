@@ -16,5 +16,4 @@ export class CharacterBuilderComponent implements OnInit {
     event.target.style.width = '0px';
     event.target.style.width = (event.target.scrollWidth + 5) + 'px';
   }
-
 }
