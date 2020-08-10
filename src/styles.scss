@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+//Alegreya
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+
+body {
+    background-color: black;
+    height: 100vh;  
+    color: white;
+    font-family: Alegreya;
+}
+
+.questCard {
+    border: 5px solid white;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.basic-grid {
+    display: grid;
+    grid-gap: 1rem;
+    place-items: center;
+}
+
+input {
+    background-color: black;
+    color: white;
+    font-family: Alegreya;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

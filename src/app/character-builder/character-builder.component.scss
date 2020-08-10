@@ -1,0 +1,42 @@
+.basic-grid {
+    &.character-grid {
+        place-items: center start;
+        font-size: 1.5rem;
+        grid-gap: 0rem;
+
+        .line-grid {
+            display: grid;
+            // grid-template-rows: 1fr;
+            // grid-template-columns: 1fr;
+            place-items: start stretch;
+            column-gap: .5rem;
+
+            span {
+                grid-row: 1;
+            }
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 0rem;
+            grid-template-areas:
+                "input"
+                "helper";
+
+            .input-section {
+                grid-area: input;
+            }
+            input {
+                padding-left: .5rem;
+            }
+            p {
+                grid-area: helper;
+                font-size: .9rem;
+                place-self: start center;
+                margin: 0rem;
+                color: darkgrey;
+            }
+        }
+    }
+}
