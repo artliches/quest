@@ -64,7 +64,7 @@
                 }
                 .tall {
                     grid-row: 3;
-                    grid-column: 3;
+                    grid-column: 4;
                 }
             }
 
@@ -133,7 +133,7 @@
                 }
     
                 &.age-height {
-                    grid-template-columns: .1fr .3fr .8fr 1fr 1fr ;
+                    grid-template-columns: .1fr .3fr 1fr 1fr 1fr ;
                     grid-template-rows: 1fr;
                     .im {
                         grid-column: 1;
@@ -163,7 +163,7 @@
                 }
     
                 &.single-line-description-input {
-                    grid-template-columns: .6fr 3fr .1fr;
+                    grid-template-columns: .7fr 3fr .1fr;
                     grid-template-rows: 1fr;
                     .input-section {
                         grid-row: 1;
@@ -180,6 +180,9 @@
 
                 &.distinct {
                     grid-template-columns: 2fr .1fr 2fr .1fr;
+                    .first {
+                        grid-column: 1 / span 4;
+                    }
                     .dFeature1, .comma1, .dFeature2, .comma2 {
                         grid-row: 2;
                     }
