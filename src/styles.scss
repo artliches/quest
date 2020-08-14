@@ -14,7 +14,7 @@ body {
     padding: 1.5rem;
 }
 
-.roundNumber {
+.roundBorder {
   background-color: white;
   color: black;
   border-radius: 0.8em;
@@ -24,6 +24,10 @@ body {
   margin-right: 15px;
   text-align: center;
   width: 1.6em; 
+}
+
+button.roundBorder {
+  margin-right: 0rem;
 }
 
 .center-input {
@@ -75,18 +79,35 @@ body {
     }
 }
 
-input {
+input, textarea {
     background-color: black;
     color: white;
     font-family: Alegreya;
     font-size: 1rem;
-    border: none;
-    border-bottom: 1px solid white;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid white;
+
+  &.toCapitalize {
+    text-transform: capitalize;
+  }
+
+  &.toUpperCase {
+    text-transform: uppercase;
+  }
+}
+
+textarea {
+  border: 1px dotted white;
+  resize: vertical;
 }
 
 .input-grid {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
   grid-gap: 0rem;
   grid-template-areas:
       "input"
@@ -95,7 +116,7 @@ input {
   .input-section {
       grid-area: input;
   }
-  input {
+  input, textarea {
       padding-left: .5rem;
       width: 100%;
   }
@@ -120,12 +141,32 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+button {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 2rem;
+
+  &:hover {
+      background-color: white;
+      color: black;
+      transform: scale(1.02);
+  }
+  &:active {
+      transform: scale(.95);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .basic-grid {
     &.main-screen {
       .sheet-section {
         grid-template-columns: repeat(2, 1fr);
         place-items: stretch;
+        .abilitySheet {
+          grid-column: 1 / span 2;
+        }
       }
     }
 }

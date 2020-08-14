@@ -1,0 +1,54 @@
+.learningPathName-section {
+    margin-bottom: 2rem;
+    input {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+    }
+}
+
+.abilityDescriptionsLayout-section {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.abilityDescriptions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    margin-bottom: 2rem;
+}
+
+
+.learningPath-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: 
+        "closeButton"
+        "pathName"
+        "descriptions";
+    button {
+        grid-area: closeButton;
+        place-self: end;
+        margin-right: 0rem;
+    }
+}
+
+button {
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .abilityDescriptionsLayout-section {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        .first {
+            grid-column: 1 / span 2;
+        }
+    }
+}

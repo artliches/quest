@@ -1,0 +1,19 @@
+<div aria-label="Abilities Section" class='questCardGrid'>
+    <div class='cardTitle'>
+        Abilities
+    </div>
+    <div class='cardBody'>
+        <section class='abilities-grid'>
+            <span class='abilities-cards'>
+                <span class='learning-path-card-grid'>
+                    <app-learning-path [pathNumber]='number' (learningPathCardToDelete)='removeLearningPath($event)' *ngFor='let number of numberOfPaths'></app-learning-path>
+                </span>
+            </span>
+            <span class='abilities-button'>
+                <button (click)='addNewLearningPath()' class='roundBorder' aria-label="Add New Learning Path">+</button>
+            </span>
+        </section>
+
+        
+    </div>
+</div>

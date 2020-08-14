@@ -24,9 +24,10 @@
 
                 Personal Inventory
                 <div class='personalInventoryList' *ngFor='let item of inventoryNumbers'>
-                    <span class='roundNumber'>
+                    <span class='roundBorder'>
                         {{item}}
                     </span>
+                    <!-- <textarea name='inven{{item}}' [(ngModel)]='inventory[item]' (keyup)='growTextarea($event)'></textarea> -->
                     <input [(ngModel)]='inventory[item]' type='text' name='inven{{item}}'>
                 </div>
             </div>

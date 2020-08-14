@@ -1,0 +1,36 @@
+.abilities-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "cards"
+        "button";
+    
+    .abilities-card {
+        grid-area: cards;
+        place-self: stretch;
+    }
+    .abilities-button {
+        grid-area: button;
+        place-self: center;
+    }
+}
+
+.learning-path-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 1rem;
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    .learning-path-card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    }
+}

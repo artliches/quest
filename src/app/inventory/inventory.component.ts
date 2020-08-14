@@ -18,4 +18,9 @@ export class InventoryComponent implements OnInit {
       this.inventory[i] = '';
     }
   }
+
+  growTextarea(event: any) {
+    event.target.style.height = '0px';
+    event.target.style.height = (event.target.scrollHeight + 5) + 'px';
+  }
 }
