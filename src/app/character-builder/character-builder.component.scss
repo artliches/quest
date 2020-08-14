@@ -92,30 +92,6 @@
                 }
             }
         }
-
-        .input-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 0rem;
-            grid-template-areas:
-                "input"
-                "helper";
-
-            .input-section {
-                grid-area: input;
-            }
-            input {
-                padding-left: .5rem;
-                width: 100%;
-            }
-            p {
-                grid-area: helper;
-                font-size: .9rem;
-                place-self: start center;
-                margin: 0rem;
-                color: darkgrey;
-            }
-        }
     }
 }
 

@@ -1,0 +1,33 @@
+        <div class='questCardGrid'>
+            <div class='cardTitle'>
+                Inventory
+            </div>
+            <div class='cardBody'>
+                <span class='charStats-grid'>
+                    <span class='charStats'>
+                        HP
+                        <span class='input-grid'>
+                            <input class='center-input' type='number' min='0' max='10' name='charHP'> 
+                            <p>Hit Points</p>
+                        </span>
+                    </span>
+    
+    
+                    <span class='charStats'>
+                        AP
+                        <span class='input-grid'>
+                            <input class='center-input' type='number' name='charAP'> 
+                            <p>Adventure Points</p>
+                        </span>
+                    </span>
+                </span>
+
+                Personal Inventory
+                <div class='personalInventoryList' *ngFor='let item of inventoryNumbers'>
+                    <span class='roundNumber'>
+                        {{item}}
+                    </span>
+                    <input [(ngModel)]='inventory[item]' type='text' name='inven{{item}}'>
+                </div>
+            </div>
+        </div>
