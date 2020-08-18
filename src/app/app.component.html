@@ -11,6 +11,25 @@
         <app-inventory [inventoryJson]='uploadedSheet' [forceUpload]='forceJsonUpload' (jsonToExport)='getJson($event, "charInventory")' class='invenSheet'></app-inventory>
         <app-abilities [abilitiesJson]='uploadedSheet' (jsonToExport)='getJson($event, "charAbilities")' class='abilitySheet'></app-abilities>
     </div>
+    <div class='attribution-section'>
+        <p>
+            This work uses material from the
+            Quest Creators Resource. The Quest
+            Creators Resource by The Adventure
+            Guild, LLC is licensed under <a target="_blank" href='https://creativecommons.org/licenses/by/4.0/'>CC BY
+            4.0</a>.
+        </p>
+        <p>
+            For more information about
+            Quest, please visit <a target="_blank" href='https://www.adventure.game'>www.adventure.
+            game</a>.
+        </p>
+        <p>
+            Additionally, please <a target="_blank" href='https://www.adventure.game/community-code'>read Quest’s
+            Community Guidelines</a> to help create
+            experiences that are positive and fun.
+        </p>
+    </div>
 </section>
 
 <input style='display: none' #fileUploadInput type='file' id='hiddenInput' accept=".json, application/json" (change)='uploadFile($event)'>
