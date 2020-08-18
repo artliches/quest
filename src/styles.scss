@@ -125,7 +125,18 @@ button.roundBorder {
           color: magenta;
         }
       }
+      .version-section {
+        font-size: .8rem;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: center;
+      }
     }
+}
+
+.magenta {
+  color: magenta;
 }
 
 input, textarea {
@@ -259,16 +270,4 @@ button {
       border: 5px solid black;
     }
   }
-
-  // .basic-grid {
-  //   &.main-screen {
-  //     .sheet-section {
-  //       grid-template-columns: repeat(2, 1fr);
-  //       place-items: stretch;
-  //       .abilitySheet {
-  //         grid-column: 1 / span 2;
-  //       }
-  //     }
-  //   }
-  // }
 }
