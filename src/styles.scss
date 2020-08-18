@@ -28,6 +28,8 @@ body {
 
 button.roundBorder {
   margin-right: 0rem;
+  border-radius: 50%;
+  font-size: 2rem;
 }
 
 .center-input {
@@ -90,7 +92,7 @@ input {
   border: none;
   border-bottom: 1px solid white;
 
-  &.toCapitalize {
+  &.toCap {
     text-transform: capitalize;
   }
 
@@ -145,8 +147,6 @@ button {
   background-color: black;
   color: white;
   border: 1px solid white;
-  border-radius: 50%;
-  font-size: 2rem;
 
   &:hover {
       background-color: white;
@@ -156,6 +156,10 @@ button {
   &:active {
       transform: scale(.95);
   }
+}
+
+.printOnly {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -169,5 +173,52 @@ button {
         }
       }
     }
+  }
 }
+
+@media print {
+  .hiddenPrint {
+    display: none;
+  }
+
+  .printOnly {
+    display: block;
+    border-bottom: 1px solid black;
+  }
+
+  body {
+    color: black;
+  }
+
+  .roundBorder {
+    background-color: black;
+    color: white;
+  }
+
+  .questCard {
+    border: 5px solid black;
+  }
+
+  .questCardGrid {
+    .cardTitle {
+      background-color: white;
+      color: black;
+    }
+
+    .cardBody {
+      border: 5px solid black;
+    }
+  }
+
+  // .basic-grid {
+  //   &.main-screen {
+  //     .sheet-section {
+  //       grid-template-columns: repeat(2, 1fr);
+  //       place-items: stretch;
+  //       .abilitySheet {
+  //         grid-column: 1 / span 2;
+  //       }
+  //     }
+  //   }
+  // }
 }

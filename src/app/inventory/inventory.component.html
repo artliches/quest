@@ -7,7 +7,7 @@
                     <span class='charStats'>
                         HP
                         <span class='input-grid'>
-                            <input class='center-input' type='number' min='0' max='10' name='charHP'> 
+                            <input class='center-input' [(ngModel)]='charInventory["hp"]' (ngModelChange)='updateJson()' type='number' min='0' max='10' name='charHP'> 
                             <p>Hit Points</p>
                         </span>
                     </span>
@@ -16,7 +16,7 @@
                     <span class='charStats'>
                         AP
                         <span class='input-grid'>
-                            <input class='center-input' type='number' name='charAP'> 
+                            <input class='center-input' [(ngModel)]='charInventory["ap"]' (ngModelChange)='updateJson()' type='number' min='0' name='charAP'> 
                             <p>Adventure Points</p>
                         </span>
                     </span>
@@ -27,8 +27,7 @@
                     <span class='roundBorder'>
                         {{item}}
                     </span>
-                    <!-- <textarea name='inven{{item}}' [(ngModel)]='inventory[item]' (keyup)='growTextarea($event)'></textarea> -->
-                    <input [(ngModel)]='inventory[item]' type='text' name='inven{{item}}'>
+                    <input [(ngModel)]='charInventory["inventory"][item]' (ngModelChange)='updateJson()' type='text' name='inven{{item}}'>
                 </div>
             </div>
         </div>

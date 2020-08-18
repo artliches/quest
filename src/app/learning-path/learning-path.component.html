@@ -1,20 +1,20 @@
 <div class='questCardGrid'>
     <span class='cardBody learningPath-grid'>
-        <button class='roundBorder' (click)='removeLearningPath()' aria-label="Remove Learning Path">x</button>
+        <button class='roundBorder roundButton' (click)='removeLearningPath()' aria-label="Remove Learning Path">x</button>
 
         <span class='input-grid learningPathName-section'>
-            <input aria-label="Learning Path Name" [(ngModel)]='learningPathName' class='center-input toUpperCase' type='text' name='learningPathName'> 
+            <input aria-label="Learning Path Name" [(ngModel)]='learningPathObj["pathName"]' (ngModelChange)='updateJson()' class='center-input toUpperCase' type='text' name='learningPathName'> 
             <p>Learning Path Name</p>
         </span>
     
         <section class='abilityDescriptionsLayout-section'>
-            <div [ngClass]="{'first': first}" class='abilityDescriptions-grid' *ngFor='let ability of abilityNumbers; let first = first'>
+            <div [ngClass]="{'first': first}" class='abilityDescriptions-grid' *ngFor='let abilityIndex of abilityNumbers; let first = first'>
                 <span class='input-grid'>
-                    <input aria-label="Ability Name" class='toUpperCase' type='text' name='{{learningPathName}}AbilityTitle_{{ability}}'>
+                    <input [(ngModel)]="learningPathObj['abilityArray'][abilityIndex].abilityName" (ngModelChange)='updateJson()' aria-label="Ability Name" class='toUpperCase' type='text' name='{{learningPathName}}AbilityTitle_{{abilityIndex}}'>
                     <p>Ability Name</p>
                 </span>
                 <span class='input-grid'>
-                    <textarea class='input-section' aria-label="Ability Description" (keyup)='growTextarea($event)'></textarea>
+                    <textarea class='input-section' [(ngModel)]="learningPathObj['abilityArray'][abilityIndex].abilityDescrip" (ngModelChange)='updateJson()' aria-label="Ability Description" (keyup)='growTextarea($event)'></textarea>
                     <p>Ability Description</p>
                 </span>
             </div>

@@ -8,12 +8,14 @@
             <div class='line-grid names-and-pronouns'>
                 <span class='top'>My name is </span>
                 <span class='input-grid middle'>
-                    <input class='input-section' type='text' name='charName'> 
+                    <input [(ngModel)]='charSheet["name"]' (ngModelChange)='capitalizeString($event, "name"); updateJson()' class='input-section hiddenPrint' type='text' name='name'>
+                    <span class='printOnly'>{{charSheet["name"]}}</span> 
                     <p>Name</p>
                 </span>
     
                 <span class='input-grid bottom'>
-                    <input type='text' name='charPronouns'>
+                    <input class='hiddenPrint' [(ngModel)]='charSheet["pronouns"]' (ngModelChange)='capitalizeString($event, "pronouns") ; updateJson()' type='text' name='charPronouns'>
+                    <span class='printOnly'>{{charSheet["pronouns"]}}</span> 
                     <p>Pronouns</p>
                 </span>
             </div>
@@ -21,12 +23,14 @@
             <div class='line-grid age-height'>
                 <span class='im'>I'm</span>
                 <span class='input-grid age-section'>
-                    <input style='text-align: center;' type='number' min='1' max='2000' name='charAge'>
+                    <input [(ngModel)]='charSheet["age"]' (ngModelChange)='updateJson()' class='hiddenPrint' style='text-align: center;' type='number' min='1' max='2000' name='charAge'>
+                    <span class='printOnly'>{{charSheet["age"]}}</span>
                     <p>Age</p>
                 </span>
                 <span class='yearsOld'>year(s) old and stand </span>
                 <span class='input-grid height-section'>
-                    <input type='text' name='charHeight'>
+                    <input class='hiddenPrint' [(ngModel)]='charSheet["height"]' (ngModelChange)='updateJson()' type='text' name='charHeight'>
+                    <span class='printOnly'>{{charSheet["height"]}}</span>
                     <p>Height</p>
                 </span>
                 <span class='tall'> tall.</span>
@@ -35,7 +39,8 @@
             <div class='line-grid single-line-description-input'>
                 <span>I'm the party's</span>
                 <span class='input-grid input-section'>
-                    <input  type='text' name='charRole'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["role"]' (ngModelChange)='capitalizeString($event, "role") ; updateJson()' type='text' name='charRole'>
+                    <span class='printOnly'>{{charSheet["role"]}}</span>
                     <p>Role</p>
                 </span>
                 <span class='endPunctuation'>.</span>
@@ -46,13 +51,15 @@
                     When people see me, they first notice my
                 </span>
                 <span class='input-grid dFeature1'>
-                    <input type='text' name='charDistinct1'>
-                    <p>First Distinctive Feature</p>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["body"]' (ngModelChange)='capitalizeString($event, "body") ; updateJson()' type='text' name='charBody'>
+                    <span class='printOnly'>{{charSheet["body"]}}</span>
+                    <p>Body</p>
                 </span>
                 <span class='comma1'>,</span>
                 <span class='input-grid dFeature2'>
-                    <input type='text' name='charDistinct2'>
-                    <p>Second Distinctive Feature</p>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["face"]' (ngModelChange)='capitalizeString($event, "face") ; updateJson()' type='text' name='charFace'>
+                    <span class='printOnly'>{{charSheet["face"]}}</span>
+                    <p>Face</p>
                 </span>
                 <span class='comma2'>,</span>
             </div>
@@ -60,7 +67,8 @@
             <div class='line-grid vibe'>
                 <span class='first'>and</span> 
                 <span class='input-grid vibe-section'>
-                    <input  type='text' name='charDistinct3'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["vibe"]' (ngModelChange)='capitalizeString($event, "vibe") ; updateJson()' type='text' name='charDistinct3'>
+                    <span class='printOnly'>{{charSheet["vibe"]}}</span>
                     <p>Vibe</p>
                 </span>
                 <span class='third'>.</span>
@@ -69,12 +77,14 @@
             <div class='line-grid style'>
                 <span class='first'>I wear </span>
                 <span class='input-grid style1'>
-                    <input  type='text' name='charStyle1'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["distinct1"]' (ngModelChange)='capitalizeString($event, "distinct1") ; updateJson()' type='text' name='charStyle1'>
+                    <span class='printOnly'>{{charSheet["distinct1"]}}</span>
                     <p>First Distinct Style</p>
                 </span>
                 <span class='third'>,</span>
                 <span class='input-grid style2'>
-                    <input  type='text' name='charStyle2'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["distinct2"]' (ngModelChange)='capitalizeString($event, "distinct2") ; updateJson()' type='text' name='charStyle2'>
+                    <span class='printOnly'>{{charSheet["distinct2"]}}</span>
                     <p>Second Distinct Style</p>
                 </span>
                 <span class='fifth'>,</span>
@@ -83,7 +93,8 @@
             <div class='line-grid mannerism'>
                 <span class='first'>and move with</span>
                 <span class='input-grid'>
-                    <input  type='text' name='charStyle3'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["mannerism"]' (ngModelChange)='capitalizeString($event, "mannerism") ; updateJson()' type='text' name='charStyle3'>
+                    <span class='printOnly'>{{charSheet["mannerism"]}}</span>
                     <p>Distinct Mannerism</p>
                 </span>
                 <span>.</span>
@@ -92,7 +103,8 @@
             <div class='line-grid home'>
                 <span class='firstHome'>I'm from </span>
                 <span class='input-grid home-section'>
-                    <input  type='text' name='charHome'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["home"]' (ngModelChange)='capitalizeString($event, "home") ; updateJson()' type='text' name='charHome'>
+                    <span class='printOnly'>{{charSheet["home"]}}</span>
                     <p>Home</p>
                 </span>
                 <span class='homeComma'>,</span>
@@ -104,7 +116,8 @@
     
             <div class='line-grid'>
                 <span class='input-grid'>
-                    <input  type='text' name='charCommunity'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["community"]' (ngModelChange)='capitalizeString($event, "community") ; updateJson()' type='text' name='charCommunity'>
+                    <span class='printOnly'>{{charSheet["community"]}}</span>
                     <p>Community</p>
                 </span>
                 <span>.</span>
@@ -113,7 +126,8 @@
             <div class='line-grid single-line-description-input '>
                 <span>I believe in </span>
                 <span class='input-grid input-section'>
-                    <input  type='text' name='charIdeal'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["ideal"]' (ngModelChange)='capitalizeString($event, "ideal") ; updateJson()' type='text' name='charIdeal'>
+                    <span class='printOnly'>{{charSheet["ideal"]}}</span>
                     <p>Ideal</p>
                 </span>
                 <span class='endPunctuation'>,</span>
@@ -124,7 +138,8 @@
                     but my 
                 </span>
                 <span class='input-grid input-section'>
-                    <input  type='text' name='charFlaw'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["flaw"]' (ngModelChange)='capitalizeString($event, "flaw") ; updateJson()' type='text' name='charFlaw'>
+                    <span class='printOnly'>{{charSheet["flaw"]}}</span>
                     <p>Flaw</p>
                 </span>
                 <span class='under-input-section'>side can get in the way.</span>
@@ -133,7 +148,8 @@
             <div class='line-grid single-line-description-input'>
                 <span>I dream of </span>
                 <span class='input-grid input-section'>
-                    <input  type='text' name='charDream'>
+                    <input class='hiddenPrint'[(ngModel)]='charSheet["dream"]' (ngModelChange)='capitalizeString($event, "dream") ; updateJson()' type='text' name='charDream'>
+                    <span class='printOnly'>{{charSheet["dream"]}}</span>
                     <p>Dream</p>
                 </span>
                 <span class='endPunctuation'>.</span>

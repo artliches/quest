@@ -6,11 +6,17 @@
         <section class='abilities-grid'>
             <span class='abilities-cards'>
                 <span class='learning-path-card-grid'>
-                    <app-learning-path [pathNumber]='number' (learningPathCardToDelete)='removeLearningPath($event)' *ngFor='let number of numberOfPaths'></app-learning-path>
+                    <app-learning-path
+                        [pathNumber]='number'
+                        [data]='this.abilitiesData["charAbilities"] ? this.abilitiesData["charAbilities"][number] : {}'
+                        (jsonToExport)='jsonToUpload($event)'
+                        (learningPathCardToDelete)='removeLearningPath($event)'
+                        *ngFor='let number of numberOfPaths'>
+                    </app-learning-path>
                 </span>
             </span>
             <span class='abilities-button'>
-                <button (click)='addNewLearningPath()' class='roundBorder' aria-label="Add New Learning Path">+</button>
+                <button (click)='addNewLearningPath()' class='roundBorder roundButton' aria-label="Add New Learning Path">+</button>
             </span>
         </section>
 

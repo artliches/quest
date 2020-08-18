@@ -1,24 +1,68 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-learning-path',
   templateUrl: './learning-path.component.html',
   styleUrls: ['./learning-path.component.scss']
 })
-export class LearningPathComponent implements OnInit {
+export class LearningPathComponent implements OnInit, OnChanges {
+  // tslint:disable: no-string-literal
   abilities = {};
   abilityNumbers = [];
   learningPathName = '';
   @Input() pathNumber = 0;
+  @Input() data = {
+    cardNumber: this.pathNumber,
+    pathName: '',
+    abilityArray: [
+      {
+        abilityName: '',
+        abilityDescrip: ''
+      }
+    ]
+  };
   @Output() learningPathCardToDelete = new EventEmitter<any>();
+  @Output() jsonToExport = new EventEmitter<any>();
+
+  learningPathObj = {
+    cardNumber: this.pathNumber,
+    pathName: '',
+    abilityArray: [
+      {
+        abilityName: '',
+        abilityDescrip: ''
+      }
+    ]
+  };
 
   constructor() { }
 
   ngOnInit() {
-    for (let i = 1; i <= 5; i++) {
+
+  }
+
+  ngOnChanges() {
+    this.abilityNumbers = [];
+    this.learningPathObj = {
+      cardNumber: this.pathNumber,
+      pathName: '',
+      abilityArray: [
+      ]
+    };
+
+    for (let i = 0; i <= 4; i++) {
       this.abilityNumbers.push(i);
-      this.abilities[i] = '';
+      this.learningPathObj.abilityArray.push({
+        abilityName: '',
+        abilityDescrip: '',
+      });
     }
+
+    if (this.data && this.data['abilityArray']) {
+      this.learningPathObj = this.data;
+      this.updateJson();
+    }
+    // this.updateJson();
   }
 
   growTextarea(event: any) {
@@ -28,5 +72,9 @@ export class LearningPathComponent implements OnInit {
 
   removeLearningPath() {
     this.learningPathCardToDelete.emit(this.pathNumber);
+  }
+
+  updateJson() {
+    this.jsonToExport.emit(this.learningPathObj);
   }
 }
