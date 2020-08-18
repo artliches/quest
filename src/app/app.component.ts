@@ -18,7 +18,7 @@ export class AppComponent {
   };
 
   getCharName(newCharName: string) {
-    this.charName = newCharName;
+    this.charName = newCharName.toUpperCase();
   }
 
   getJson(json: any, jsonSection: string) {
@@ -33,7 +33,7 @@ export class AppComponent {
     const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(this.jsonToDownload));
     const dlAnchorElem = document.getElementById('downloadAnchorElem');
     dlAnchorElem.setAttribute('href', dataStr);
-    dlAnchorElem.setAttribute('download', `TEST.json`);
+    dlAnchorElem.setAttribute('download', `${this.charName.toUpperCase()}.json`);
   }
 
   uploadFile(event: any) {

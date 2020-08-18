@@ -8,6 +8,10 @@ body {
     font-family: Alegreya;
 }
 
+.header {
+  font-size: 2rem;
+}
+
 .questCard {
     border: 5px solid white;
     border-radius: 20px;
@@ -24,6 +28,36 @@ body {
   margin-right: 15px;
   text-align: center;
   width: 1.6em; 
+}
+
+.adminButtons {
+  background-color: white;
+  color: black;
+  font-family: Alegreya;
+  font-size: 1.5rem;
+  border: 5px solid black;
+  border-radius: 20px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  cursor: pointer;
+
+  text-decoration: none;
+
+  &.disabledButton {
+    background-color: grey;
+    color: white;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.02);
+  }
+  &:active {
+      transform: scale(.95);
+  }
 }
 
 button.roundBorder {
@@ -74,6 +108,10 @@ button.roundBorder {
 
     &.main-screen {
       grid-template-columns: 1fr;
+      .button-section {
+        display: grid;
+        grid-gap: 1rem;
+      }
       .sheet-section {
         grid-template-columns: 1fr;
         place-items: stretch;
@@ -165,6 +203,9 @@ button {
 @media only screen and (min-width: 768px) {
   .basic-grid {
     &.main-screen {
+      .button-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .sheet-section {
         grid-template-columns: repeat(2, 1fr);
         place-items: stretch;

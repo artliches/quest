@@ -8,7 +8,7 @@
             <div class='line-grid names-and-pronouns'>
                 <span class='top'>My name is </span>
                 <span class='input-grid middle'>
-                    <input [(ngModel)]='charSheet["name"]' (ngModelChange)='capitalizeString($event, "name"); updateJson()' class='input-section hiddenPrint' type='text' name='name'>
+                    <input [(ngModel)]='charSheet["name"]' (ngModelChange)='passCharName($event); updateJson()' class='input-section hiddenPrint' type='text' name='name'>
                     <span class='printOnly'>{{charSheet["name"]}}</span> 
                     <p>Name</p>
                 </span>

@@ -55,7 +55,6 @@ export class CharacterBuilderComponent implements OnInit, OnChanges {
   }
 
   passCharName(newCharName: string) {
-    this.charSheet['charName'] = this.capitalizeString(this.charSheet['charName']);
     this.charName.emit(newCharName);
   }
 

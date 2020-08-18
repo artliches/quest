@@ -1,11 +1,10 @@
 <section class='basic-grid main-screen'>
     <h1 class='header'>QUEST TOOLKIT</h1>
     <div class='button-section'>
-        <a id='downloadAnchorElem' (click)='download()'>DOWNLOAD</a>
-        <button onclick="document.querySelector('#hiddenInput').click()">
+        <a class='adminButtons' [ngClass]='{"disabledButton": charName === ""}' id='downloadAnchorElem' (click)='download()'>DOWNLOAD {{charName}}</a>
+        <button class='adminButtons' onclick="document.querySelector('#hiddenInput').click()">
             UPLOAD
         </button>
-        
     </div>
     <div class='basic-grid sheet-section'>
         <app-character-builder [uploadedJson]='uploadedSheet' [forceUpload]='forceJsonUpload' (charName)='getCharName($event)' (charSheetJson)='getJson($event, "charSheet")' class='charSheet'></app-character-builder>
