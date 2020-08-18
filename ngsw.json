@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1597779296453,
+  "timestamp": 1597779869823,
   "index": "/quest/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/quest/favicon.ico",
         "/quest/index.html",
-        "/quest/main-es2015.7bedb2b2d6ab7447243a.js",
-        "/quest/main-es5.7bedb2b2d6ab7447243a.js",
+        "/quest/main-es2015.04837a219e0ae785187f.js",
+        "/quest/main-es5.04837a219e0ae785187f.js",
         "/quest/manifest.webmanifest",
         "/quest/polyfills-es2015.ffa9bb4e015925544f91.js",
         "/quest/polyfills-es5.0290b245fbcca09184ac.js",
@@ -53,9 +53,9 @@
     "/quest/assets/icons/sword-512x512.png": "e519481fe2d8a4c7522929f0a89a6d3849e12581",
     "/quest/assets/icons/sword-72x72.png": "5a400351170e7b8d82b6208938269bb616c609f2",
     "/quest/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/quest/index.html": "1604c7fec7224882e652fcaa1e84febeeb62c1b8",
-    "/quest/main-es2015.7bedb2b2d6ab7447243a.js": "3784728a4f9568ca796a5dc0370d37322963981b",
-    "/quest/main-es5.7bedb2b2d6ab7447243a.js": "0841b476d6c9184834e02265080d3a15961e51a1",
+    "/quest/index.html": "67c51accee9baec98d0650dc15a935197f044bb3",
+    "/quest/main-es2015.04837a219e0ae785187f.js": "b5994c698d328e8f34d0b35b5a2ef3960f4f165c",
+    "/quest/main-es5.04837a219e0ae785187f.js": "881ba543b2ca3a4ffeeb6f42b471265ae055e58c",
     "/quest/manifest.webmanifest": "96ec00cbb7756ab99f66d05de08293186d3c6cf4",
     "/quest/polyfills-es2015.ffa9bb4e015925544f91.js": "79b2ff5ba292ae9e56f0b43982b9e76d9ddcf285",
     "/quest/polyfills-es5.0290b245fbcca09184ac.js": "a7bfe75cfe39caaf5bc4c64b35dd9f1f0918a25f",
