@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1597772672843,
+  "timestamp": 1597774154728,
   "index": "/quest/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "/quest/favicon.ico",
         "/quest/index.html",
-        "/quest/main-es2015.752fcb399ec1930a0b29.js",
-        "/quest/main-es5.752fcb399ec1930a0b29.js",
+        "/quest/main-es2015.82f7637a59753c74c9b2.js",
+        "/quest/main-es5.82f7637a59753c74c9b2.js",
         "/quest/manifest.webmanifest",
         "/quest/polyfills-es2015.ffa9bb4e015925544f91.js",
         "/quest/polyfills-es5.0290b245fbcca09184ac.js",
         "/quest/runtime-es2015.cdfb0ddb511f65fdc0a0.js",
         "/quest/runtime-es5.cdfb0ddb511f65fdc0a0.js",
-        "/quest/styles.086d6909d62dc28001e3.css"
+        "/quest/styles.98b198ce51a08dbd81a4.css"
       ],
       "patterns": []
     },
@@ -53,15 +53,15 @@
     "/quest/assets/icons/sword-512x512.png": "e519481fe2d8a4c7522929f0a89a6d3849e12581",
     "/quest/assets/icons/sword-72x72.png": "5a400351170e7b8d82b6208938269bb616c609f2",
     "/quest/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/quest/index.html": "0aeb7ca123388a179d5e26211294af5513e29b92",
-    "/quest/main-es2015.752fcb399ec1930a0b29.js": "4996a505963e0976cc9a30948fe2337c9acfd172",
-    "/quest/main-es5.752fcb399ec1930a0b29.js": "d3f0f2c41b8d47dbbf0c0076e5213f9e62250978",
+    "/quest/index.html": "11d9b57fd0f7da9ab415f8b5aa5f415082ba43f8",
+    "/quest/main-es2015.82f7637a59753c74c9b2.js": "97269f2023f56d2b1fa856908aba348f0456412d",
+    "/quest/main-es5.82f7637a59753c74c9b2.js": "3dc16b861e6032316f30c6443eef6c49ce6027a3",
     "/quest/manifest.webmanifest": "96ec00cbb7756ab99f66d05de08293186d3c6cf4",
     "/quest/polyfills-es2015.ffa9bb4e015925544f91.js": "79b2ff5ba292ae9e56f0b43982b9e76d9ddcf285",
     "/quest/polyfills-es5.0290b245fbcca09184ac.js": "a7bfe75cfe39caaf5bc4c64b35dd9f1f0918a25f",
     "/quest/runtime-es2015.cdfb0ddb511f65fdc0a0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/quest/runtime-es5.cdfb0ddb511f65fdc0a0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/quest/styles.086d6909d62dc28001e3.css": "522c70af138b6ec0d2f6559c9b149dceb0d5571a"
+    "/quest/styles.98b198ce51a08dbd81a4.css": "bb3e3161508063a75fd786f838e388f133437ff3"
   },
   "navigationUrls": [
     {
