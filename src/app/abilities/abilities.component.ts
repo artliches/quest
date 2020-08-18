@@ -33,21 +33,30 @@ export class AbilitiesComponent implements OnInit, OnChanges {
     this.numberOfPaths.push(this.numberOfPaths.length);
   }
 
-  removeLearningPath(cardToRemove: number) {
-    const indexToRemove = this.numberOfPaths.indexOf(cardToRemove);
+  removeLearningPath(deleteTargetInfo: any) {
+    const indexToRemove = this.numberOfPaths.indexOf(deleteTargetInfo['pathNum']);
     if (indexToRemove !== -1) {
       this.numberOfPaths.splice(indexToRemove, 1);
-      this.learningPathsArray.splice(indexToRemove, 1);
+      this.learningPathsArray.forEach((obj, index) => {
+        if (obj['cardNumber'] === deleteTargetInfo['cardNum']) {
+          this.learningPathsArray.splice(index, 1);
+        }
+      });
 
       this.jsonToUpload(this.learningPathsArray, true);
     }
   }
 
   jsonToUpload(jsonToExport: any, deleteOperation?: boolean) {
+    let existingEntry = false;
     if (!deleteOperation) {
-      if (this.learningPathsArray[jsonToExport['cardNumber']]) {
-        this.learningPathsArray[jsonToExport['cardNumber']] = jsonToExport;
-      } else {
+      this.learningPathsArray.forEach((obj, index) => {
+        if (obj['cardNumber'] === jsonToExport['cardNumber']) {
+          existingEntry = true;
+          this.learningPathsArray[index] = jsonToExport;
+        }
+      });
+      if (!existingEntry) {
         this.learningPathsArray.push(jsonToExport);
       }
     }

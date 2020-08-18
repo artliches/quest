@@ -62,7 +62,6 @@ export class LearningPathComponent implements OnInit, OnChanges {
       this.learningPathObj = this.data;
       this.updateJson();
     }
-    // this.updateJson();
   }
 
   growTextarea(event: any) {
@@ -71,7 +70,8 @@ export class LearningPathComponent implements OnInit, OnChanges {
   }
 
   removeLearningPath() {
-    this.learningPathCardToDelete.emit(this.pathNumber);
+    const deleteInfo = {pathNum: this.pathNumber, cardNum: this.learningPathObj['cardNumber']};
+    this.learningPathCardToDelete.emit(deleteInfo);
   }
 
   updateJson() {
