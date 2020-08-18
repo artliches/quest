@@ -1,0 +1,84 @@
+{
+  "configVersion": 1,
+  "timestamp": 1597772617181,
+  "index": "/quest/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/quest/favicon.ico",
+        "/quest/index.html",
+        "/quest/main-es2015.752fcb399ec1930a0b29.js",
+        "/quest/main-es5.752fcb399ec1930a0b29.js",
+        "/quest/manifest.webmanifest",
+        "/quest/polyfills-es2015.ffa9bb4e015925544f91.js",
+        "/quest/polyfills-es5.0290b245fbcca09184ac.js",
+        "/quest/runtime-es2015.cdfb0ddb511f65fdc0a0.js",
+        "/quest/runtime-es5.cdfb0ddb511f65fdc0a0.js",
+        "/quest/styles.086d6909d62dc28001e3.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/quest/assets/icons/favicon.ico",
+        "/quest/assets/icons/sword-114x114.png",
+        "/quest/assets/icons/sword-144x144.png",
+        "/quest/assets/icons/sword-152x152.png",
+        "/quest/assets/icons/sword-16x16.png",
+        "/quest/assets/icons/sword-24x24.png",
+        "/quest/assets/icons/sword-32x32.png",
+        "/quest/assets/icons/sword-48x48.png",
+        "/quest/assets/icons/sword-512x512.png",
+        "/quest/assets/icons/sword-72x72.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/quest/assets/icons/favicon.ico": "c9e80cb751a2fe68c6c9150f53d06a938e2efee3",
+    "/quest/assets/icons/sword-114x114.png": "5a722fa0bbc3e93a28c53b50fd5aaf1399ab5c2f",
+    "/quest/assets/icons/sword-144x144.png": "dcf4b5126a68f99b7793f206bbebf15735a2509c",
+    "/quest/assets/icons/sword-152x152.png": "8a606dbc5f9a04832b90a42f9cf023e400e28331",
+    "/quest/assets/icons/sword-16x16.png": "5a038a18fd97bbab3c593bada4661916e77c3ea2",
+    "/quest/assets/icons/sword-24x24.png": "61c09611e8e03c9d448b88e05c5f068af29e72e7",
+    "/quest/assets/icons/sword-32x32.png": "46c6ed5cfc735c66a77cfe6e946c856fde9c051d",
+    "/quest/assets/icons/sword-48x48.png": "dd1df4a99236fbe531bdffbc1c0eaf9832e389c3",
+    "/quest/assets/icons/sword-512x512.png": "e519481fe2d8a4c7522929f0a89a6d3849e12581",
+    "/quest/assets/icons/sword-72x72.png": "5a400351170e7b8d82b6208938269bb616c609f2",
+    "/quest/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/quest/index.html": "0aeb7ca123388a179d5e26211294af5513e29b92",
+    "/quest/main-es2015.752fcb399ec1930a0b29.js": "4996a505963e0976cc9a30948fe2337c9acfd172",
+    "/quest/main-es5.752fcb399ec1930a0b29.js": "d3f0f2c41b8d47dbbf0c0076e5213f9e62250978",
+    "/quest/manifest.webmanifest": "96ec00cbb7756ab99f66d05de08293186d3c6cf4",
+    "/quest/polyfills-es2015.ffa9bb4e015925544f91.js": "79b2ff5ba292ae9e56f0b43982b9e76d9ddcf285",
+    "/quest/polyfills-es5.0290b245fbcca09184ac.js": "a7bfe75cfe39caaf5bc4c64b35dd9f1f0918a25f",
+    "/quest/runtime-es2015.cdfb0ddb511f65fdc0a0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/quest/runtime-es5.cdfb0ddb511f65fdc0a0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/quest/styles.086d6909d62dc28001e3.css": "522c70af138b6ec0d2f6559c9b149dceb0d5571a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
