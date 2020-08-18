@@ -8,6 +8,8 @@ import { CharacterBuilderComponent } from './character-builder/character-builder
 import { InventoryComponent } from './inventory/inventory.component';
 import { AbilitiesComponent } from './abilities/abilities.component';
 import { LearningPathComponent } from './learning-path/learning-path.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { LearningPathComponent } from './learning-path/learning-path.component';
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

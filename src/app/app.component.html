@@ -1,7 +1,7 @@
 <section class='basic-grid main-screen'>
-    <h1 class='header'>QUEST TOOLKIT</h1>
+    <h1 class='header'>QUEST CHARACTER SHEET</h1>
     <div class='button-section'>
-        <a class='adminButtons' [ngClass]='{"disabledButton": charName === ""}' id='downloadAnchorElem' (click)='download()'>DOWNLOAD {{charName}}</a>
+        <a class='adminButtons' id='downloadAnchorElem' (click)='download()'>DOWNLOAD {{jsonToDownload['charSheet'].name.toUpperCase()}}</a>
         <button class='adminButtons' onclick="document.querySelector('#hiddenInput').click()">
             UPLOAD
         </button>

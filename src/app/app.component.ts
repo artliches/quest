@@ -30,10 +30,11 @@ export class AppComponent {
   }
 
   download() {
+    const fileName = this.charName.toUpperCase() !== '' ? `${this.charName.toUpperCase()}.json` : `blank.json`;
     const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(this.jsonToDownload));
     const dlAnchorElem = document.getElementById('downloadAnchorElem');
     dlAnchorElem.setAttribute('href', dataStr);
-    dlAnchorElem.setAttribute('download', `${this.charName.toUpperCase()}.json`);
+    dlAnchorElem.setAttribute('download', fileName);
   }
 
   uploadFile(event: any) {
