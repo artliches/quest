@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1597779869823,
+  "timestamp": 1602285146933,
   "index": "/quest/index.html",
   "assetGroups": [
     {
@@ -53,7 +53,7 @@
     "/quest/assets/icons/sword-512x512.png": "e519481fe2d8a4c7522929f0a89a6d3849e12581",
     "/quest/assets/icons/sword-72x72.png": "5a400351170e7b8d82b6208938269bb616c609f2",
     "/quest/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/quest/index.html": "67c51accee9baec98d0650dc15a935197f044bb3",
+    "/quest/index.html": "91971d0ad3c663577dc1c72f8994287b78e4d321",
     "/quest/main-es2015.04837a219e0ae785187f.js": "b5994c698d328e8f34d0b35b5a2ef3960f4f165c",
     "/quest/main-es5.04837a219e0ae785187f.js": "881ba543b2ca3a4ffeeb6f42b471265ae055e58c",
     "/quest/manifest.webmanifest": "96ec00cbb7756ab99f66d05de08293186d3c6cf4",
